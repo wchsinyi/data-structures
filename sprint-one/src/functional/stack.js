@@ -18,9 +18,8 @@ var Stack = function() {
   i.pop = function(){
     // debugger;
     if (i.index>0){
-      var current = i.index
-      var popitem = i.storage[current-1];
-      delete i.storage[current-1];
+      var popitem = i.storage[i.index-1];
+      delete i.storage[i.index-1];
       i.index=i.index-1;    
       return popitem;
     }

@@ -20,7 +20,7 @@ var Queue = function() {
         // i[keys-1] = i[keys]
     // } 
     // debugger;
-    var ditem  = i.index==0 ?   i.storage[0] : 0 ;
+    var ditem  = i.index==0 ?  0: i.storage[0]  ;
     if(i.index!=0){
       for (var keys in i.storage){
         i.storage[keys-1] = i.storage[keys]

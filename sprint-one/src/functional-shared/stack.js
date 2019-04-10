@@ -4,7 +4,6 @@ var Stack = function() {
 	var index = 0;
 	newinst.stor = stor;
 	newinst.index = index;
-	debugger;
 	newinst.pop = pop; 
 	newinst.push = push; 
 	newinst.size = size; 
@@ -12,10 +11,10 @@ var Stack = function() {
 };
 
 var pop = function(){
-	console.log(this.index)
+	// console.log(this.index)
     if (this.index>0){
       var popitem = this.stor[this.index-1];
-	  console.log(popitem)
+	  // console.log(popitem)
       delete this.stor[this.index-1];
       this.index=this.index-1;    
       return popitem;
