@@ -16,8 +16,7 @@ var stackMethods = {
   },
   pop() {
     if (this.amount > 0) {
-      this.amount--;
-      return this.storage[this.amount + 1];
+      return this.storage[this.amount--];
     }
   },
   size() {
