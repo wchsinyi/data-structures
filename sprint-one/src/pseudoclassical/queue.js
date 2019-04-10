@@ -11,7 +11,9 @@ Queue.prototype.enqueue = function (val) {
 }
 Queue.prototype.dequeue = function () {
   if (this.end > this.start) {
-    return this.storage[this.start++];
+    let temp = this.storage[this.start];
+    delete this.storage[this.start++]
+    return temp;
   }
 }
 Queue.prototype.size = function () {

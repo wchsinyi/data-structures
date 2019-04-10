@@ -15,7 +15,9 @@ var queueMethods = {
   },
   dequeue() {
     if (this.start < this.end) {
-      return this.storage[this.start++];
+      let temp = this.storage[this.start];
+      delete this.storage[this.start++]
+      return temp;
     }
   },
   size() {

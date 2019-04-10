@@ -9,13 +9,14 @@ var Queue = function() {
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
-    storage[end] = value;
-    end++;
+    storage[end++] = value;
   };
 
   someInstance.dequeue = function() {
     if (start !== end) {
-      return storage[start++];
+      let temp = storage[start];
+      delete storage[start++]
+      return temp;
     }
   };
 
