@@ -1,5 +1,5 @@
 var Queue = function() {
-	this.stor = {};
+	this.storage = {};
 	this.index = 0;
 };
 

@@ -1,8 +1,8 @@
 var Queue = function() {
 	var newinst= Object.create(Queue.prototype);
-	var stor ={};
+	var storage ={};
 	var index = 0;
-	newinst.stor = stor;
+	newinst.storage = storage;
 	newinst.index = index;
 	return newinst;
 };
