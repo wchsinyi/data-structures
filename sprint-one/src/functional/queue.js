@@ -1,6 +1,7 @@
 var Queue = function() {
   var i = {};
   var storage = {};
+// <<<<<<< HEAD
   var index =0;
   i.storage = storage;
   i.index = index;
@@ -33,6 +34,27 @@ var Queue = function() {
 
   i.size = function() {
     return i.index
+// =======
+//   var start = 0;
+//   var end = 0;
+
+//   // Implement the methods below
+
+//   someInstance.enqueue = function(value) {
+//     storage[end++] = value;
+//   };
+
+//   someInstance.dequeue = function() {
+//     if (start !== end) {
+//       let temp = storage[start];
+//       delete storage[start++]
+//       return temp;
+//     }
+//   };
+
+//   someInstance.size = function() {
+//     return end - start;
+// >>>>>>> 320ebabcd5ac7dbfeb79b438367e37e872279fe5
   };
   return i;
 };
