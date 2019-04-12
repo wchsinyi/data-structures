@@ -1,62 +1,59 @@
 var Stack = function() {
-  var i = {};
-
-  // Use an object with numeric keys to store values
-// <<<<<<< HEAD
-  // var storage = {};
-  // var index =0;
-
-  i.storage = {};
-  i.index = 0;
+  var someInstance = {};
+  var storage = {};
+  var size = 0;
 
   // Implement the methods below
-  // debugger;
-  i.push = function(value){
-    i.storage[i.index] = value; 
-    i.index=i.index+1;
+  someInstance.push = function(value) {
+    size++;
+    storage[size] = value;
   };
 
-  i.pop = function(){
-    // debugger;
-    if (i.index>0){
-      var popitem = i.storage[i.index-1];
-      delete i.storage[i.index-1];
-      i.index=i.index-1;    
-      return popitem;
+  someInstance.pop = function() {
+    if (size > 0) {
+      return storage[size--];
     }
-    else{
-      return; 
-    }
-    
   };
 
-  i.size = function(){
-    return i.index;
+  someInstance.size = function() {
+    return size;
   };
 
-
-  return i;
+  return someInstance;
 };
-// =======
-//   var storage = {};
-//   var size = 0;
+
+
+// var Stack = function() {
+
+//   var i = {};
+
+
+//   i.storage = {};
+//   i.index = 0;
 
 //   // Implement the methods below
-//   someInstance.push = function(value) {
-//     size++;
-//     storage[size] = value;
+//   // debugger;
+//   i.push = function(value){
+//     i.storage[i.index] = value; 
+//     i.index=i.index+1;
 //   };
 
-//   someInstance.pop = function() {
-//     if (size > 0) {
-//       return storage[size--];
+//   i.pop = function(){
+//     // debugger;
+//     if (i.index>0){
+//       var popitem = i.storage[i.index-1];
+//       delete i.storage[i.index-1];
+//       i.index=i.index-1;    
+//       return popitem;
 //     }
+//     else{
+//       return; 
+//     }
+    
 //   };
 
-//   someInstance.size = function() {
-//     return size;
+//   i.size = function(){
+//     return i.index;
 //   };
-
-//   return someInstance;
-// };
-// >>>>>>> 320ebabcd5ac7dbfeb79b438367e37e872279fe5
+//   return i;
+// }
